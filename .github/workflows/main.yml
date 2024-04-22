@@ -8,7 +8,7 @@ on:
     branches:
       - main
 
-jobs:
+jobs: 
   test:
     name: Run Test Suite
     runs-on: ubuntu-latest
