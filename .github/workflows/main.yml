@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'adopt'
 
       - name: Cache Maven dependencies
         uses: actions/cache@v2
@@ -49,4 +48,4 @@ jobs:
           distribution: 'adopt'
           server-id: github
           server-username: ${{ github.actor }}
-          server-password: ${{ GITHUB_TOKEN }}
+          server-password: ${{ secrets.GITHUB_TOKEN }}
