@@ -14,7 +14,7 @@ public class WordPressTestSuite extends BrowserSetup {
         browser.get("https://demo.wppool.dev/wp-dark-mode-slchbrwjg9kpvz6/wp-admin/admin.php?page=wp-dark-mode#/switch");
 
         // Select the Floating Switch Style dropdown and choose an option (e.g., 'Pill')
-        WebElement switchStyleDropdown = browser.findElement(By.cssSelector("select[name='wpdm_float_switch_style']"));
+        WebElement switchStyleDropdown = browser.findElement(By.cssSelector("body > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > section:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)"));
         Select dropdown = new Select(switchStyleDropdown);
         dropdown.selectByVisibleText("Pill");
 
@@ -59,7 +59,7 @@ public class WordPressTestSuite extends BrowserSetup {
         browser.get("https://demo.wppool.dev/wp-dark-mode-slchbrwjg9kpvz6/wp-admin/admin.php?page=wp-dark-mode#/accessibility");
 
         // Uncheck the Keyboard Shortcut option
-        WebElement keyboardShortcutCheckbox = browser.findElement(By.cssSelector("input[name='wpdm_enable_shortcut']"));
+        WebElement keyboardShortcutCheckbox = browser.findElement(By.id("wp-dark-mode-enable-keyboard-shortcut"));
         if (keyboardShortcutCheckbox.isSelected()) {
             keyboardShortcutCheckbox.click();
         }
